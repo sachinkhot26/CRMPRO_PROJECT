@@ -1,5 +1,7 @@
 package com.crm.qa.testcases;
 
+import org.testng.annotations.Test;
+
 public class ContactPageTest {
 	
 	
@@ -8,4 +10,11 @@ public class ContactPageTest {
 		super();
 	}
 
+	@Test
+	public void sample() {
+		
+		System.out.println("sachin");
+	}
+	
+	
 }

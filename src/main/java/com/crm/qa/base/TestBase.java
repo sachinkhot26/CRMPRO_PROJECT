@@ -21,7 +21,7 @@ public class TestBase {
 		
 		try{
 			prop=new Properties();
-			FileInputStream fis = new FileInputStream("/Users/sachinkhot/Desktop/Eclipse/CRMPRO/src/main/java/com/crm/qa/config/config.properties");
+			FileInputStream fis = new FileInputStream("/Users/sachin/Desktop/Eclipse/CRMPRO/src/main/java/com/crm/qa/config/config.properties");
 			prop.load(fis);
 		}
 		catch(FileNotFoundException e){
@@ -38,13 +38,13 @@ public class TestBase {
 		String browserName = prop.getProperty("browser");
 		
 		if(browserName.equalsIgnoreCase("chrome")){
-			System.setProperty("webdriver.chrome.driver","/Users/sachinkhot/Desktop/selenium/chromedriver");
+			System.setProperty("webdriver.chrome.driver","/Users/sachin/Desktop/selenium/chromedriver");
 			driver=new ChromeDriver();
 			
 		}
 		else if(browserName.equalsIgnoreCase("ff")){
 			
-			System.setProperty("webdriver.gecko.driver","/Users/sachinkhot/Desktop/selenium/geckodriver");
+			System.setProperty("webdriver.gecko.driver","/Users/sachin/Desktop/selenium/geckodriver");
 			driver=new FirefoxDriver();
 		}
 		
