@@ -1,5 +1,9 @@
 package com.crm.qa.testcases;
 
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.Test;
+import org.testng.annotations.BeforeMethod;
+import org.testng.AssertJUnit;
 import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
@@ -29,6 +33,7 @@ public class HomePageTest extends TestBase {
 		super();
 	}
 	
+	
 	@BeforeMethod
 	
 	public void setUp() throws Exception{
@@ -48,7 +53,7 @@ public class HomePageTest extends TestBase {
 		
 		String homePageTitle=homePage.verifyPageTitle();
 		
-		Assert.assertEquals(homePageTitle, "CRMPRO");
+		AssertJUnit.assertEquals(homePageTitle, "CRMPRO");
 		
 	}
 	
@@ -56,7 +61,7 @@ public class HomePageTest extends TestBase {
 	public void verifyUserNamelabel(){
 		testUtil.switchToFrame("mainpanel");
 		boolean flag = homePage.validateUsername();
-		Assert.assertTrue(flag);
+		AssertJUnit.assertTrue(flag);
 	}
 	
 	@Test(priority=3)
@@ -65,7 +70,7 @@ public class HomePageTest extends TestBase {
 		testUtil.switchToFrame("mainpanel");
 		contactPage=homePage.clickOnContacts();
 		
-		Assert.assertTrue(driver.findElement(By.xpath("//td[contains(text(),'Contacts')]")).isDisplayed());
+		AssertJUnit.assertTrue(driver.findElement(By.xpath("//td[contains(text(),'Contacts')]")).isDisplayed());
 		
 	}
 	
@@ -80,6 +85,7 @@ public class HomePageTest extends TestBase {
 		testUtil.switchToFrame("mainpanel");
 		taskPage = homePage.clickOnTasks();
 	}
+	
 	
 	
 	@AfterMethod

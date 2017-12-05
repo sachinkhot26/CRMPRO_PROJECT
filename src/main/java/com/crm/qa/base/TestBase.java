@@ -42,7 +42,7 @@ public class TestBase {
 			driver=new ChromeDriver();
 			
 		}
-		else if(browserName.equalsIgnoreCase("ff")){
+		else if(browserName.equalsIgnoreCase("firefox")){
 			
 			System.setProperty("webdriver.gecko.driver","/Users/sachin/Desktop/selenium/geckodriver");
 			driver=new FirefoxDriver();
