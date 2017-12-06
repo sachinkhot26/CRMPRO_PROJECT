@@ -86,7 +86,13 @@ public class HomePageTest extends TestBase {
 		taskPage = homePage.clickOnTasks();
 	}
 	
-	
+	@Test(priority=6)
+	public void homePageTestfail() throws Exception{
+		
+		Assert.assertFalse(true);
+		
+		
+	}
 	
 	@AfterMethod
 	

@@ -57,6 +57,15 @@ public class LoginPageTest extends TestBase{
 		
 	}
 	
+	@Test(priority=4)
+	
+	public void loginTestfail() throws Exception{
+		
+		Assert.assertFalse(true);
+		
+		
+	}
+	
 	
 	@AfterMethod
 	

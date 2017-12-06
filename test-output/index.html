@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-CRM_automation_Test_Suite">
-              <span class="suite-name border-passed">CRM automation Test Suite</span>
+              <span class="suite-name border-failed">CRM automation Test Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -91,7 +91,26 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">8 methods,   8 passed</span>
+                    <span class="method-stats">10 methods, 2 failed,   8 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-CRM_automation_Test_Suite" class="hide-methods failed suite-CRM_automation_Test_Suite"> (hide)</a> <!-- hide-methods failed suite-CRM_automation_Test_Suite -->
+                      <a href="#" panel-name="suite-CRM_automation_Test_Suite" class="show-methods failed suite-CRM_automation_Test_Suite"> (show)</a> <!-- show-methods failed suite-CRM_automation_Test_Suite -->
+                    </span>
+                    <div class="method-list-content failed suite-CRM_automation_Test_Suite">
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-CRM_automation_Test_Suite" title="com.crm.qa.testcases.HomePageTest" hash-for-method="homePageTestfail">homePageTestfail</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-CRM_automation_Test_Suite" title="com.crm.qa.testcases.LoginPageTest" hash-for-method="loginTestfail">loginTestfail</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-CRM_automation_Test_Suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -152,6 +171,44 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-CRM_automation_Test_Suite" class="panel CRM_automation_Test_Suite">
+          <div class="suite-CRM_automation_Test_Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">com.crm.qa.testcases.HomePageTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="homePageTestfail">
+                  </a> <!-- homePageTestfail -->
+                  <span class="method-name">homePageTestfail</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [false] but found [true]
+	at com.crm.qa.testcases.HomePageTest.homePageTestfail(HomePageTest.java:92)
+... Removed 29 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-CRM_automation_Test_Suite-class-failed -->
+          <div class="suite-CRM_automation_Test_Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">com.crm.qa.testcases.LoginPageTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="loginTestfail">
+                  </a> <!-- loginTestfail -->
+                  <span class="method-name">loginTestfail</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [false] but found [true]
+	at com.crm.qa.testcases.LoginPageTest.loginTestfail(LoginPageTest.java:64)
+... Removed 29 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-CRM_automation_Test_Suite-class-failed -->
           <div class="suite-CRM_automation_Test_Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -280,39 +337,47 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(8);
+data.addRows(10);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'loginTest')
 data.setCell(0, 2, 'com.crm.qa.testcases.LoginPageTest')
-data.setCell(0, 3, 8218);
+data.setCell(0, 3, 8160);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'verifyDealsPage')
+data.setCell(1, 1, 'verifyContactPage')
 data.setCell(1, 2, 'com.crm.qa.testcases.HomePageTest')
-data.setCell(1, 3, 1914);
+data.setCell(1, 3, 1663);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'verifyContactPage')
+data.setCell(2, 1, 'verifyDealsPage')
 data.setCell(2, 2, 'com.crm.qa.testcases.HomePageTest')
-data.setCell(2, 3, 1732);
+data.setCell(2, 3, 1521);
 data.setCell(3, 0, 3)
 data.setCell(3, 1, 'verifyTasksPage')
 data.setCell(3, 2, 'com.crm.qa.testcases.HomePageTest')
-data.setCell(3, 3, 1574);
+data.setCell(3, 3, 1505);
 data.setCell(4, 0, 4)
 data.setCell(4, 1, 'verifyUserNamelabel')
 data.setCell(4, 2, 'com.crm.qa.testcases.HomePageTest')
-data.setCell(4, 3, 379);
+data.setCell(4, 3, 389);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'verifyHomePageTitle')
-data.setCell(5, 2, 'com.crm.qa.testcases.HomePageTest')
-data.setCell(5, 3, 58);
+data.setCell(5, 1, 'crmLogoImageTest')
+data.setCell(5, 2, 'com.crm.qa.testcases.LoginPageTest')
+data.setCell(5, 3, 61);
 data.setCell(6, 0, 6)
-data.setCell(6, 1, 'crmLogoImageTest')
-data.setCell(6, 2, 'com.crm.qa.testcases.LoginPageTest')
+data.setCell(6, 1, 'verifyHomePageTitle')
+data.setCell(6, 2, 'com.crm.qa.testcases.HomePageTest')
 data.setCell(6, 3, 56);
 data.setCell(7, 0, 7)
 data.setCell(7, 1, 'loginPageTitleTest')
 data.setCell(7, 2, 'com.crm.qa.testcases.LoginPageTest')
-data.setCell(7, 3, 11);
+data.setCell(7, 3, 17);
+data.setCell(8, 0, 8)
+data.setCell(8, 1, 'loginTestfail')
+data.setCell(8, 2, 'com.crm.qa.testcases.LoginPageTest')
+data.setCell(8, 3, 3);
+data.setCell(9, 0, 9)
+data.setCell(9, 1, 'homePageTestfail')
+data.setCell(9, 2, 'com.crm.qa.testcases.HomePageTest')
+data.setCell(9, 3, 2);
 window.suiteTableData['CRM_automation_Test_Suite']= { tableData: data, tableDiv: 'times-div-CRM_automation_Test_Suite'}
 return data;
 }
@@ -350,113 +415,147 @@ return data;
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyHomePageTitle</span>
-                <span class="method-start">17519 ms</span>
+                <span class="method-start">16349 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">17579 ms</span>
+                <span class="method-start">16407 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.crm.qa.testcases.LoginPageTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">17669 ms</span>
+                <span class="method-start">16501 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">loginPageTitleTest</span>
-                <span class="method-start">23496 ms</span>
+                <span class="method-start">33035 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">23508 ms</span>
+                <span class="method-start">33053 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.crm.qa.testcases.HomePageTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">23588 ms</span>
+                <span class="method-start">33138 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyUserNamelabel</span>
-                <span class="method-start">36503 ms</span>
+                <span class="method-start">46819 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">36884 ms</span>
+                <span class="method-start">47209 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.crm.qa.testcases.LoginPageTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">37034 ms</span>
+                <span class="method-start">47297 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">crmLogoImageTest</span>
-                <span class="method-start">42203 ms</span>
+                <span class="method-start">52595 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">42260 ms</span>
+                <span class="method-start">52657 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.crm.qa.testcases.HomePageTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">42344 ms</span>
+                <span class="method-start">52736 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyContactPage</span>
-                <span class="method-start">55179 ms</span>
+                <span class="method-start">65854 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">56912 ms</span>
+                <span class="method-start">67518 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.crm.qa.testcases.LoginPageTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">57056 ms</span>
+                <span class="method-start">67605 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">loginTest</span>
-                <span class="method-start">63493 ms</span>
+                <span class="method-start">76102 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">71712 ms</span>
+                <span class="method-start">84263 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.crm.qa.testcases.HomePageTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">71798 ms</span>
+                <span class="method-start">84349 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyDealsPage</span>
-                <span class="method-start">86937 ms</span>
+                <span class="method-start">100215 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">88853 ms</span>
+                <span class="method-start">101737 ms</span>
               </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.crm.qa.testcases.LoginPageTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">88942 ms</span>
+                <span class="method-start">101822 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">loginTestfail</span>
+                <span class="method-start">107523 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">107531 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.crm.qa.testcases.HomePageTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">107614 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyTasksPage</span>
-                <span class="method-start">101649 ms</span>
+                <span class="method-start">121463 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">103224 ms</span>
+                <span class="method-start">122969 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">123056 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">homePageTestfail</span>
+                <span class="method-start">136309 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">136312 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
